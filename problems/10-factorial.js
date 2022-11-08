@@ -16,8 +16,16 @@ factorial(3); // 6
 factorial(5); // 120
 ***********************************************************************/
 
-function factorial(num) {
+function factorial(num, arr=[]) {
   // Your code here
+  if(num<1) return 0;
+  arr.push(num)
+  factorial(num-1,arr)
+  let total =1;
+  for(let i=0; i<arr.length; i++) {
+    total *=arr[i]
+  }
+  return total;
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
